@@ -293,39 +293,69 @@
 }
 
 @media screen and (max-width: 800px) {
-
-  .wrap .central{
-    top:170px;
-    bottom: auto;
-      
+  .wrap{
+    height: auto;
+    overflow-y: scroll;
+    min-height: 100vh;
   }
-  .wrap .central .nav{
- 
+  .wrap .title_holder{
+    position: static;
+  }
+  .wrap .central{
+    position: static;
+    width: 100%;
+    height: auto;
+  }
 
-    bottom: auto; top: 330px;
+  .wrap .central .logo{
+    position: static;
+    width: 150px; 
+    height: 150px;
+    margin-top: 10px;
+  }
+  .wrap .side_decoration{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+
+    border: none;
+  }
+
+  .wrap .side_decoration_right{
+    display: none;
+  }
+
+  .wrap .side_decoration .over{
+    width: 100%;
+    background: white;
+    opacity: 0.9;
+  }
+
+  .wrap .central .nav{
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
   }
   
   .wrap .central .nav a{
-
-    position: relative;
-    left: auto!important;
-    top: auto!important;
-    right: auto!important;
-    bottom: auto!important;
-
-    margin: 0;
-    margin-bottom: 5px;
-  
+    position: static;
+    margin: 10px auto;  
   }
 
   .wrap .central .nav .fit_text{
-
     font-size: 2.2vw;
-  
   }
 
   .wrap .popup{
-
+    top:0;
     width: 100%; 
     right: -100%;
     transition: 0.3s;
