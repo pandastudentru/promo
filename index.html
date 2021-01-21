@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<! –– Промо для pandastudent.ru by Grigory Kovalev 2021 ––>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+    <title>Мудрая Панда: промо</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div class='wrap' id="app">
+        <div class='title_holder'>
+            <p>Мудрая Панда</p>
+            <p class='subtitle'>Помощь студентам: дипломные, курсовые, контрольные.</p>
+        </div>
+        <div class='central'>
+            <div class='side_decoration side_decoration_left'>
+                <div class='moving'></div>
+                <div class='over'></div>
+            </div>
+            <div class='side_decoration side_decoration_right'>
+                <div class='moving'></div>
+                <div class='over'></div>
+            </div>
+            <div class='logo'></div>
+            <div class='nav'>
+                <a class='row_2 left'       href='https://vk.com/pandastudent' target="blank">Вконтакте</a>
+                <a class='row_2 right'      href=' https://wa.me/79537819939' target="blank">Whatsapp</a>
+                <a class='row_1 left'       href='https://pandastudentru.github.io/reviews/' target="blank">Отзывы</a>
+                <a class='row_1 right'      href='tel:+79537819939' target="blank">+7(953)781-99-39</a>
+                <a class='row_0 left fit_text'       href='mailto:pandastudent.ru@gmail.com' target="blank">pandastudent.ru@gmail.com</a>
+                <a class='row_0 right' v-on:click="open_side()" target="blank">Подробно</a>
+            </div>
+        </div>
+
+        <div class='copy_holder'>
+            <p>© Мудрая Панда 2021</p>
+        </div>
+
+        <div class='popup' v-bind:class="{opened: side_opened}">
+            <div class='content'>
+                <p class='title'>
+                    Мы - команда специалистов "Мудрая Панда", 
+                    Поможем вам разобраться в любой студенческой работе.
+                </p>
+                <p>
+                    Напишите нам, если: <br>
+                    - завал на учебе и не хватает времени, чтобы подготовиться к зачету?<br>
+                    - лень разбираться в непрофильном, неинтересном предмете?<br>
+                    - преподаватель придирается к мелочам и постоянно возвращает работу на переделку?<br>
+                    - а, может быть, вы просто работаете и очень заняты?<br>
+                </p>
+                <p>
+                    Обратитесь к нам, и вы получите:<br>
+                    - экспертную и моральную поддержку 7 дней в неделю. Нужно внести правку, или просто поддержать? Пишите! :)<br>
+                    - небезразличный, индивидуальный подход к вашему вопросу. <br>
+                    - грамотную консультацию по вашей работе, чтобы подготовка к сдаче не обернулась провалом.<br>
+                    - в результате - сэкономленное время и нервы. Чем больше студентов с "хвостами", которые обратились к нам, тем их меньше.<br>
+                </p>
+                <p>
+                    Чтобы получить консультацию: <br>
+                    - пишите в личные сообщения группы; <br>
+                    - почта: pandastudent.ru@gmail.com<br>
+                    - звоните +7 (953) 781-99-39 (на этом же телефоне WhatsApp)<br>
+                </p>
+            </div>
+            <div class='close' v-on:click="close_side()">Закрыть</div>
+        </div>
+    </div>
+
+<script>
+    var app = new Vue({
+    el: '#app',
+    data: {
+        side_opened : false
+    },
+    methods: {
+        open_side: function () {
+            this.side_opened = true
+        },
+        close_side: function () {
+            this.side_opened = false
+        }
+    }
+})
+</script>
+</body>
+</html>
