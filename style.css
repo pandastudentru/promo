@@ -95,6 +95,12 @@
   margin: auto;
 }
 
+.wrap .central .nav .row_m1{
+  bottom: -60px;
+  background: none;
+  width: 100%;
+}
+
 .wrap .central .nav .row_0{
   bottom: 0;
 }
@@ -214,7 +220,7 @@
 }
 
 .wrap .popup .content{
-  height: 90%;
+  height: 100%;
   overflow-y: scroll;
 
   border-bottom: 2px solid #39ecd7;
@@ -239,13 +245,14 @@
   right: 0;
   bottom: 20px;
   margin: auto;
+  margin-bottom: 10px;
 
   width: 300px; height: 40px;
 
   line-height: 40px;
   font-size: 30px;
   text-align: center;
-  position: absolute;
+
 
   text-transform: uppercase;
   background-color: #39ecd7;
@@ -306,7 +313,9 @@
     width: 100%;
     height: auto;
   }
-
+  .wrap .central .nav .center{
+    margin: 10px auto;
+  }
   .wrap .central .logo{
     position: static;
     width: 150px; 
