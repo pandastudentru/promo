@@ -363,6 +363,10 @@
     font-size: 2.2vw;
   }
 
+  .wrap .central .nav .row_m1{
+    font-size: 20px;
+  }
+
   .wrap .popup{
     top:0;
     width: 100%; 
